@@ -1,0 +1,24 @@
+/sbin/ifconfig eth0 192.168.1.66 netmask 255.255.255.252 broadcast 192.168.1.67 up
+echo 1 > /proc/sys/net/ipv4/conf/eth0/proxy_arp
+/sbin/ifconfig eth1 192.168.1.34 netmask 255.255.255.252 broadcast 192.168.1.35 up
+echo 1 > /proc/sys/net/ipv4/conf/eth1/proxy_arp
+/sbin/ifconfig eth2 192.168.1.114 netmask 255.255.255.252 broadcast 192.168.1.115 up
+echo 1 > /proc/sys/net/ipv4/conf/eth2/proxy_arp
+/sbin/ifconfig eth3 192.168.1.90 netmask 255.255.255.252 broadcast 192.168.1.91 up
+echo 1 > /proc/sys/net/ipv4/conf/eth3/proxy_arp
+/sbin/ifconfig eth4 192.168.1.138 netmask 255.255.255.252 broadcast 192.168.1.139 up
+echo 1 > /proc/sys/net/ipv4/conf/eth4/proxy_arp
+/sbin/ifconfig eth5 192.168.1.206 netmask 255.255.255.252 broadcast 192.168.1.207 up
+echo 1 > /proc/sys/net/ipv4/conf/eth5/proxy_arp
+/sbin/ifconfig eth6 192.168.1.62 netmask 255.255.255.252 broadcast 192.168.1.63 up
+echo 1 > /proc/sys/net/ipv4/conf/eth6/proxy_arp
+/sbin/ifconfig eth7 192.168.1.54 netmask 255.255.255.252 broadcast 192.168.1.55 up
+echo 1 > /proc/sys/net/ipv4/conf/eth7/proxy_arp
+/sbin/ifconfig eth8 192.168.1.222 netmask 255.255.255.252 broadcast 192.168.1.223 up
+echo 1 > /proc/sys/net/ipv4/conf/eth8/proxy_arp
+/sbin/ifconfig eth9 192.168.1.106 netmask 255.255.255.252 broadcast 192.168.1.107 up
+echo 1 > /proc/sys/net/ipv4/conf/eth9/proxy_arp
+/sbin/ifconfig eth10 10.0.9.1 netmask 255.255.255.0 broadcast 10.0.9.255 up
+echo 1 > /proc/sys/net/ipv4/conf/eth10/proxy_arp
+route del default
+twistd -y /STRIP/STRIPmain.py
